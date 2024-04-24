@@ -1,0 +1,10 @@
+pandas
+numpy
+Flask
+seaborn
+scikit-learn
+gunicorn
+xgboost
+-e .
+dill
+
