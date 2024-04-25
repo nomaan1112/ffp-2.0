@@ -34,6 +34,7 @@ class DataIngestion:
             file_path = os.path.join(second_prev_dir,'Data',file_name)
             logging.info("Reading the Dataset from the file")
             df = pd.read_csv(file_path)
+            df.drop('Number', 'flight',axis=1)
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
 
