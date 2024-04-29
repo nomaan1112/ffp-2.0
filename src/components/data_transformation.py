@@ -45,7 +45,7 @@ class DataTransformation:
             categorical_pipeline = Pipeline(
                 steps=[
                     ("imputer",SimpleImputer(strategy="most_frequent")),
-                    ("ordinal_encoder", OrdinalEncoder()),
+                    ("ordinal_encoder", OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1)),
                     ("scaler", StandardScaler())
                 ]
             )
